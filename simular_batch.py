@@ -36,8 +36,8 @@ def ejecutar_partida():
 
 datos_totales = pd.DataFrame()
 
-for i in range(1500):  # Ejecutar 500 simulaciones
-    print(f"Simulación {i+1}/500")
+for i in range(1500):  
+    print(f"Simulación {i+1}/1500")
     df = ejecutar_partida()
     datos_totales = pd.concat([datos_totales, df], ignore_index=True)
 

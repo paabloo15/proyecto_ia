@@ -2,15 +2,14 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Cargar los datos generados
+
 df = pd.read_csv("datos_battle_royale.csv")
 
-# Estadísticas descriptivas por perfil
 resumen = df.groupby("perfil")["rendimiento"].describe()
 print("Resumen estadístico por perfil:")
 print(resumen)
 
-# Guardar gráfico de caja comparativo
+
 plt.figure(figsize=(8, 5))
 sns.boxplot(data=df, x="perfil", y="rendimiento", palette="Set2")
 plt.title("Figura 2. Comparación del rendimiento por perfil de agente")
