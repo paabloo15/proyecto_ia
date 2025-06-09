@@ -72,7 +72,7 @@ end
 to exportar-datos
   let output []
   ask turtles [
-    let fila (word salud "," recursos "," xcor "," ycor "," enemigos_cerca "," agresividad "," perfil "," ticks)
+    let fila (word salud "," recursos "," xcor "," ycor "," enemigos_cerca "," agresividad "," perfil "," rendimiento)
     set output lput fila output
   ]
   export-string-to-file (word "resultados.csv") output
